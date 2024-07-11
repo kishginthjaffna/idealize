@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: hsl(120, 46%, 38%);
+    --text-color: rgb(119, 112, 112);
+    --light-text: white;
+    --font-secondary: rgb(189, 182, 182);
+    --light-bg: black;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: "Rokkitt", serif;
+    
+}
+
+.flex{
+    display: flex;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 7%;
+    box-sizing: border-box;
+    background: var(--light-bg);
+    align-items: center;
+}
+
+nav div{
+    align-items: center;
+}
+
+nav h1 a{
+    color: var(--main-color);
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+nav h1 span{
+    color: var(--text-color);
+}
+
+nav ul li{
+    margin: 0 2vw;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 600px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: text-decoration 0.4s ease;
+}
+
+.LogIn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 2rem;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.LogIn:hover{
+    background-color: hsl(120, 46%, 28%);
+}
+
+.bgSection{
+    background: var(--light-bg);
+    margin-top: 100px;
+}
+
+section{
+    padding: 0 7%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.hero-section{
+    display: flex;
+    padding-top:95px;
+    background: var(--light-bg);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section .herDiv{
+    width: 40%;
+}
+
+.hero-section .heroDiv h1{
+    font-size: 4rem;
+    color: var(--font-secondary);
+}
+
+.hero-section .heroDiv span{
+    font-size: 3rem;
+    color: var(--main-color);
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.hero-section .heroImg{
+    width: 40%;
+    position: relative;
+}
+
+.heroDiv p{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.heroDiv button{
+    font-size: 2rem;
+    margin-right: 20px;
+    padding: 15px 17px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    font-size: 25px;
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.5s;
+    margin: 0.8em;
+}
+
+li::before,
+li::after {
+    content: '';
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: gainsboro;
+    border-radius: 50%;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+    top: calc(50% - 0.6em / 2);
+}
+
+li::before {left: 0; z-index: -1;}
+li::after {right: 0; z-index: -2;}
+
+li:hover {
+    color: white;
+}
+
+li:hover::before,
+li:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: var(--main-color);
+}
+
+li:hover::before {
+    top: 0;
+}
+
+li:hover::after {
+    right: -0.4em;
+    filter: brightness(0.8);
+}
+
+.heroDiv p{
+    color: var(--text-color);
+}
+
+.heroImg img{
+    border-radius: 400px;
+}
